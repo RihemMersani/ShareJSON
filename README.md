@@ -1,62 +1,64 @@
-# JSON Share
+# 📦 ShareJSON
 
-A web application that allows users to share JSON data publicly. Built with Next.js, Clerk for authentication, and shadcn/ui components.
+**ShareJSON** est une application web moderne qui permet de créer, stocker, visualiser et partager des données JSON de manière simple, sécurisée et intuitive.
 
-## 🚀 Features
+---
 
-- User authentication with Clerk
-- JSON editor with syntax highlighting using CodeMirror
-- Public sharing of JSON data
-- Modern UI with shadcn/ui components
-- Responsive design
-- Public access to shared JSON data without login
+## ✨ Fonctionnalités
 
-## 💻 Tech Stack
+✅ Authentification sécurisée avec Clerk  
+✅ Création de fichiers JSON personnalisés  
+✅ Stockage local (SQLite via Prisma ORM)  
+✅ Dashboard personnel pour visualiser les données  
+✅ Visualisation des JSON partagés  
+✅ Interface responsive et moderne avec Tailwind CSS  
 
-- [Next.js](https://nextjs.org/) - React framework
-- [Clerk](https://clerk.dev/) - Authentication
-- [shadcn/ui](https://ui.shadcn.com/) - UI components
-- [CodeMirror](https://www.npmjs.com/package/@codemirror/lang-json) - JSON editor (@codemirror/lang-json)
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
+---
 
-## 🛠️ Installation
+## 🔍 Aperçu
 
-1. Clone the repository:
+![Homepage](./screenshots/home.png)  
+![Dashboard](./screenshots/dashboard.png)  
+![JSON Viewer](./screenshots/json-viewer.png)
+
+---
+
+## 🚀 Démo en ligne
+
+🔗 [https://sharejson.vercel.app](https://sharejson.vercel.app)
+
+---
+
+## 🧪 Technologies utilisées
+
+| Outil / Framework   | Rôle                        |
+|---------------------|-----------------------------|
+| [Next.js](https://nextjs.org/)        | Frontend + Backend intégré |
+| [TypeScript](https://www.typescriptlang.org/)   | Typage du projet            |
+| [Tailwind CSS](https://tailwindcss.com/)        | Design et mise en page      |
+| [Clerk](https://clerk.dev/)          | Authentification utilisateur|
+| [Prisma](https://www.prisma.io/)      | ORM (SQLite/PostgreSQL)     |
+| [SQLite](https://www.sqlite.org/)     | Base de données légère      |
+
+---
+
+## ⚙️ Installation locale
 
 ```bash
-git clone https://github.com/yourusername/json-share.git
-cd json-share
-```
+# 1. Clone ce dépôt
+git clone https://github.com/RihemMersani/ShareJSON.git
+cd ShareJSON
 
-2. Install dependencies:
-
-```bash
+# 2. Installe les dépendances
 npm install
-# or
-yarn install
-```
 
-3. Set up environment variables:
-   Create a `.env.local` file in the root directory and add:
+# 3. Configure ton fichier .env
+cp .env.example .env
+# puis remplis les clés Clerk et la DATABASE_URL
 
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
-```
+# 4. Initialise la base de données
+npx prisma generate
+npx prisma db push
 
-4. Run the development server:
-
-```bash
+# 5. Lance le projet en local
 npm run dev
-# or
-yarn dev
-```
-
-## 🎥 Video Tutorial
-
-For a detailed step-by-step guide on how to build this project, you can watch the tutorial video:
-[JSON Share Project Tutorial](https://youtu.be/H0GUJV5a8Wg)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/ckriswinarto/sharejson/issues).
